@@ -42,8 +42,8 @@ const Main = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => dispatch(action.counterIncrease()),
-  decrement: () => dispatch(action.counterDecrease()),
+  increment: () => dispatch(action.counterIncrease(2)),
+  decrement: () => dispatch(action.counterDecrease(3)),
 });
 
 export default connect(null, mapDispatchToProps)(Main);
