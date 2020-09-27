@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar, SafeAreaView} from 'react-native';
 
 import Main from './screens/Main';
-import store from './store';
+import store from './store/rootStore';
 
 import {Provider} from 'react-redux';
 

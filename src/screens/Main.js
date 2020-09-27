@@ -4,7 +4,7 @@ import {Text, View, StatusBar, StyleSheet, SafeAreaView} from 'react-native';
 
 import ButtonComp from './ButtonComp';
 import Child from './Child';
-import * as action from '../actions/index';
+import * as action from '../actions/rootAction';
 
 import {connect} from 'react-redux';
 
@@ -26,7 +26,7 @@ const Main = (props) => {
           title="Increase"
           bgColor="blue"
           onPress={() => {
-            props.increment();
+            props.click();
           }}
         />
         <ButtonComp
@@ -42,8 +42,9 @@ const Main = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => dispatch(action.counterIncrease(2)),
-  decrement: () => dispatch(action.counterDecrease(3)),
+  increment: () => dispatch(action.counterIncrease(1)),
+  decrement: () => dispatch(action.counterDecrease(1)),
+  click: () => dispatch(action.click()),
 });
 
 export default connect(null, mapDispatchToProps)(Main);
